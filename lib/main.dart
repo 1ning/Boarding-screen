@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_code_app/scan.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,17 +29,35 @@ class _ElevatedButtonExample extends StatelessWidget {
       backgroundColor: Color(0xFF380E4A),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(8, 28, 8, 0),
+                child: Text(
+                  'Ramped Workout',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color(0xFFEF8B60),
+                  ),
+                ),
+              ),
+            ),
+            new Align(
+              alignment: FractionalOffset.topRight,
               child: ElevatedButton(
                 onPressed: () {
-                  print('Pressed');
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ScanQrPage()));
                 },
-                child: Text('Scanner'),
+                child: Text(
+                  'Scanner',
+                  style: TextStyle(
+                    fontSize: 10,
+                  ),
+                ),
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(180, 40),
+                  fixedSize: const Size(70, 40),
                   primary: Color(0xFFEF8B60),
                   onPrimary: Colors.black,
                   shape: RoundedRectangleBorder(
@@ -50,7 +69,7 @@ class _ElevatedButtonExample extends StatelessWidget {
             Align(
               alignment: AlignmentDirectional(0, 0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8, 188, 8, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(8, 308, 8, 0),
                 child: Container(
                   width: 300,
                   height: 100,
