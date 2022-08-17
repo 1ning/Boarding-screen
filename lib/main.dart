@@ -64,9 +64,7 @@ class _ElevatedButtonExample extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                 child: ElevatedButton(
-                  onPressed: () {
-                    print('Pressed');
-                  },
+                  onPressed: () {},
                   child: Text('Start'),
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(180, 40),
